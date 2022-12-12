@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.101.0">
-    <title>Document</title>
+    <title>Admin Panel</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="theme-color" content="#563d7c">
@@ -39,7 +39,7 @@
             <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search" />
             <ul class="navbar-nav px-3">
                 <li class="nav-item text-nowrap">
-                    <a class="nav-link" href="#">Sign out</a>
+                    <a class="nav-link" href="index.php">Sign out</a>
                 </li>
             </ul>
         </nav>
@@ -50,13 +50,13 @@
                     <div class="sidebar-sticky pt-3">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link active" href="dashboard.php">
+                                <a class="nav-link <?php echo ($_SESSION['CURR_PAGE'] == 'dashboard' ? 'active' : '')?>" href="dashboard.php">
                                     <i class="fa fa-tachometer-alt"></i>
                                     Dashboard <span class="sr-only">(current)</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="products.php">
+                                <a class="nav-link <?php echo ($_SESSION['CURR_PAGE'] == 'products' ? 'active' : '')?>" href="products.php">
                                     <i class="fa-brands fa-shopify"></i>
                                     Products
                                 </a>

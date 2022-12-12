@@ -1,3 +1,4 @@
+<?php require_once("functions.php");?>
 <?php 
     if(isset($_POST['btnlogin'])){
         $con = openConn();
@@ -27,6 +28,7 @@
             header("location: dashboard.php");
             mysqli_free_result($rsLogin);
         }
+        
         else {
             echo 'ERROR: Could not execute your request!';
         }
